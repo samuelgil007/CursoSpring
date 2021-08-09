@@ -8,7 +8,7 @@ public class HijaHerencia extends Herencia {
         super(nombre, edad);
         this.atributoHija = atributoHija;
     }
-    private HijaHerencia(){
+    public HijaHerencia(){
         //Invoca el constructor vacio super
         super();
     }
@@ -22,10 +22,8 @@ public class HijaHerencia extends Herencia {
 
     @Override
     public String toString() {
-        return "HijaHerencia{" +
-                "nombre='" + nombre + '\'' +
-                ", edad=" + edad +
-                ", id=" + id +
+        //super para llamar al metodo del padre y no repetir
+        return super.toString() +
                 ", atributoHija='" + atributoHija + '\'' +
                 '}';
     }

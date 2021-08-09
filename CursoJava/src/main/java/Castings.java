@@ -1,3 +1,6 @@
+import ObjetosJava.PolimorfismoHija;
+import ObjetosJava.PolimorfismoPadre;
+
 import java.util.Scanner;
 
 public class Castings {
@@ -14,6 +17,15 @@ public class Castings {
         var variable = escan.nextLine();
         //Cualquier variable a string
         var palabra = String.valueOf(20);
+
+        /*Upcasting y downcasting.
+        Convertir objetos de padre a hijo y de hijo a padre.
+         */
+        PolimorfismoPadre varr =  new PolimorfismoPadre();
+        PolimorfismoHija varr2 = (PolimorfismoHija)varr;
+        System.out.println(varr2.toString());
+
+        //Queda con acceso a la instanciada y convertida
     }
 
 }
