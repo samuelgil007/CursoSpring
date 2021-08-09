@@ -65,7 +65,7 @@ public class Varios {
     }
 
     //Autoboxing y unboxing. Pasar un primitivo a objeto y viceversa en ese orden.
-    //Normalmente los objetos primitivos empiezan por mayusucula. La ventaja es que tienen metodos.
+    //Normalmente los objetos primitivos empiezan por minuscula. La ventaja de los objetos es que tienen metodos.
     //puse static para usar un bloque de codigo
     static Integer intObj = 10;
     static int num = intObj;
