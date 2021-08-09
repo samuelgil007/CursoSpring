@@ -65,13 +65,24 @@ public class PersonaServices {
 
     @org.springframework.transaction.annotation.Transactional
     public ReponseDTO eliminarPersona(int id){
-        personaDao.deleteById(id);
+        try{
+            personaDao.deleteById(id);
+            return ReponseDTO.builder()
+                    .status(200)
+                    .peticion("Eliminar persona")
+                    .detalle("Se eliminó la persona con exito")
+                    .timestamp(new Date())
+                    .build();
+        }catch(Exception e){
+            return ReponseDTO.builder()
+                    .status(400)
+                    .peticion("Eliminar persona")
+                    .detalle("Error al eliminar persona")
+                    .timestamp(new Date())
+                    .build();
+        }
 
-        return ReponseDTO.builder()
-                .status(200)
-                .peticion("Eliminar persona")
-                .detalle("Se eliminó la persona con exito")
-                .timestamp(new Date())
-                .build();
+
+
     }
 }
